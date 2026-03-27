@@ -20,11 +20,13 @@ import SecurityPage from "../../pages/Settings/Security";
 import TokenUsagePage from "../../pages/Settings/TokenUsage";
 import VoiceTranscriptionPage from "../../pages/Settings/VoiceTranscription";
 import AgentsPage from "../../pages/Settings/Agents";
+import BrowserPage from "../../pages/Browser";
 
 const { Content } = Layout;
 
 const pathToKey: Record<string, string> = {
   "/chat": "chat",
+  "/browser": "browser",
   "/channels": "channels",
   "/sessions": "sessions",
   "/cron-jobs": "cron-jobs",
@@ -58,6 +60,7 @@ export default function MainLayout() {
             <Routes>
               <Route path="/" element={<Navigate to="/chat" replace />} />
               <Route path="/chat/*" element={<Chat />} />
+              <Route path="/browser" element={<BrowserPage />} />
               <Route path="/channels" element={<ChannelsPage />} />
               <Route path="/sessions" element={<SessionsPage />} />
               <Route path="/cron-jobs" element={<CronJobsPage />} />
