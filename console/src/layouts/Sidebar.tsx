@@ -43,6 +43,7 @@ import {
   Bot,
   LogOut,
   UserCog,
+  Monitor,
 } from "lucide-react";
 import api from "../api";
 import { clearAuthToken } from "../api/config";
@@ -288,6 +289,11 @@ export default function Sidebar({ selectedKey }: SidebarProps) {
           key: "chat",
           label: t("nav.chat"),
           icon: <MessageCircle size={16} />,
+        },
+        {
+          key: "browser",
+          label: t("nav.browser"),
+          icon: <Monitor size={16} />,
         },
       ],
     },
